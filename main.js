@@ -15,13 +15,23 @@ function findNum(arr, elem){
     }
 
     return arr[middle] === elem ? middle : -1;
-
-    /*if(arr[middle] === elem){
-        return middle
-    }
-    return -1;*/
 }
 
 let testArr = [1,3,4,5,9,12,13,14,17,20,33];
 
-console.log(findNum(testArr, 9));
+findNum(testArr, 9);
+
+// Substring search
+
+function substringSearch(long, short) {
+    let count = 0;
+    for(let i = 0; i < long.length; i++){
+        for(let j = 0; i < short.length; j++){
+            if(short[j] !== long[i+j]) break;
+            if(j === short.length - 1) count++;
+        }
+    }
+    return count;
+}
+
+console.log(substringSearch('some test string', 'te'));
