@@ -78,7 +78,7 @@ let testArray = [12, 1, 10, 4, 5, 3, 44];
 
 function insertionSort(arr) {
     for(var i = 1; i < arr.length; i++){
-        let currentVal = arr[i];
+        var currentVal = arr[i];
         for(var j = i - 1; j>=0 && arr[j] > currentVal; j--){
             arr[j+1] = arr[j];
         }
@@ -87,4 +87,34 @@ function insertionSort(arr) {
     return arr
 }
 
-console.log(insertionSort(testArray));
+// Merge sort
+
+function mergeSort(arr1, arr2) {
+    let result = [];
+    let i = 0;
+    let j = 0;
+    while(i < arr1.length && j < arr2.length){
+        if(arr2[j] > arr1[i]){
+            result.push(arr1[i]);
+            i++;
+        }
+        else{
+            result.push(arr2[j]);
+            j++;
+        }
+    }
+    while (i < arr1.length){
+        result.push(arr1[i]);
+        i++;
+    }
+    while(j < arr2.length){
+        result.push(arr2[j]);
+        j++;
+    }
+    return result;
+}
+
+let qwe = [1, 55, 10, 4];
+let ert = [67, 3, 2, 99];
+
+mergeSort([1, 55, 10, 4], [67, 3, 2, 99]);
