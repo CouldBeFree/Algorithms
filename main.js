@@ -114,7 +114,26 @@ function mergeSort(arr1, arr2) {
     return result;
 }
 
-let qwe = [1, 55, 10, 4];
-let ert = [67, 3, 2, 99];
+// Square
 
-mergeSort([1, 55, 10, 4], [67, 3, 2, 99]);
+function generate (end, step) {
+    let arr = [];
+    for (let i=0; i<=end; i+=step){
+        arr.push(i)
+    }
+    return arr
+}
+
+function square(n){
+    return n.map(item => item * item);
+}
+
+function sum(n){
+    let sum = 0;
+    for(let i=0; i<n.length; i++){
+        sum+=n[i]
+    }
+    return sum;
+}
+
+// Recursion
