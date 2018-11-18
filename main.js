@@ -137,3 +137,17 @@ function sum(n){
 }
 
 // Recursion
+
+function checkEven(n) {
+   if(n===10){
+       return n
+   }
+
+   else if(n%2 === 0){
+       console.log(n)
+   }
+
+   return checkEven(n-1)
+}
+
+checkEven(600);
