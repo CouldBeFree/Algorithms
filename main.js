@@ -150,4 +150,56 @@ function checkEven(n) {
    return checkEven(n-1)
 }
 
-checkEven(600);
+// checkEven(600);
+
+// Find min
+
+function min(a, b) {
+    if(a > b){
+        return b
+    }
+
+    return a;
+}
+
+// Recursion
+
+function isEven(num) {
+    if(num%2===0){
+        return true
+    }
+    else if(num%2===1){
+        return false
+    }
+    else{
+        return isEven(num * -1)
+    }
+}
+
+// Count uppercase
+
+function countBs(str) {
+    let targetChar = [];
+    for(let i=0; i<str.length; i++){
+        let char = str[i];
+        if(char === 'B'){
+            targetChar.push(char);
+        }
+    }
+    return targetChar.length
+}
+
+// console.log(countBs('asdsad'));
+
+function countChar(str, char) {
+    let charCount = [];
+    for(let i = 0; i < str.length; i++){
+        let character = str[i];
+        if(character === char){
+            charCount.push(character);
+        }
+    }
+    return charCount.length;
+}
+
+console.log(countChar('asddadwewf', 'a'));
