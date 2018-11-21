@@ -203,3 +203,12 @@ function countChar(str, char) {
 }
 
 console.log(countChar('asddadwewf', 'a'));
+
+// Reverse
+
+function reverseString(str){
+    var strArr = str.split('');
+    return strArr.reverse();
+}
+
+console.log(reverseString('Hello'));
