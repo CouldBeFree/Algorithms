@@ -212,3 +212,15 @@ function reverseString(str){
 }
 
 console.log(reverseString('Hello'));
+
+// Factorial
+
+function fuctorial(num){
+    var result = 1;
+    for(let i = 0; i < num; i++){
+        result = result * (num - i);
+    }
+    return result
+}
+
+console.log(fuctorial(5));
