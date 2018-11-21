@@ -202,7 +202,7 @@ function countChar(str, char) {
     return charCount.length;
 }
 
-console.log(countChar('asddadwewf', 'a'));
+// console.log(countChar('asddadwewf', 'a'));
 
 // Reverse
 
@@ -211,7 +211,7 @@ function reverseString(str){
     return strArr.reverse();
 }
 
-console.log(reverseString('Hello'));
+// console.log(reverseString('Hello'));
 
 // Factorial
 
@@ -223,4 +223,17 @@ function fuctorial(num){
     return result
 }
 
-console.log(fuctorial(5));
+function longestWord(string){
+    let str = string.split(' ');
+    let longest = 0;
+    let word = null;
+    for(let i = 0; i < str.length; i++){
+        if(longest < str[i].length){
+            longest = str[i].length;
+            word = str[i];
+        }
+    }
+    return word
+}
+
+console.log(longestWord('Howwwwwwwww are u doing?'));
