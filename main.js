@@ -223,6 +223,8 @@ function fuctorial(num){
     return result
 }
 
+// Longest word
+
 function longestWord(string){
     let str = string.split(' ');
     let longest = 0;
@@ -236,4 +238,16 @@ function longestWord(string){
     return word
 }
 
-console.log(longestWord('Howwwwwwwww are u doing?'));
+// console.log(longestWord('Pride and Prejudice'));
+
+// Sum
+
+function simpleAdding(num) {
+    let result = 0;
+    for(let i = 0; i < num; i++){
+        result = result + (num - i);
+    }
+    return result
+}
+
+console.log(simpleAdding(12));
