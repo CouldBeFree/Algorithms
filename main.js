@@ -289,4 +289,11 @@ function timeConvert(num) {
     return h + ':' + m;
 }
 
-console.log(timeConvert(177));
+// console.log(timeConvert(177));
+
+function sortChar(str) {
+    let sorted = str.split('').sort().join('');
+    return sorted
+}
+
+sortChar('testavd');
