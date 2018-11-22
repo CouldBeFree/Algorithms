@@ -263,4 +263,30 @@ function letterCapitalize(str) {
     return pieces.join(" ");
 }
 
-console.log(letterCapitalize('hello world'));
+// console.log(letterCapitalize('hello world'));
+
+function checkNums(num1,num2) {
+
+    if(num2 > num1){
+        return true
+    }
+
+    else if(num2 < num1){
+        return false
+    }
+
+    return -1
+
+}
+
+// console.log(checkNums(46, 44));
+
+function timeConvert(num) {
+    let h = Math.floor(num / 60);
+    let m = num % 60;
+    h = h < 10 ? '0' + h : h;
+    m = m < 10 ? '0' + m : m;
+    return h + ':' + m;
+}
+
+console.log(timeConvert(177));
