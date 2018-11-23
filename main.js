@@ -139,15 +139,15 @@ function sum(n){
 // Recursion
 
 function checkEven(n) {
-   if(n===10){
-       return n
-   }
+    if(n===10){
+        return n
+    }
 
-   else if(n%2 === 0){
-       console.log(n)
-   }
+    else if(n%2 === 0){
+        console.log(n)
+    }
 
-   return checkEven(n-1)
+    return checkEven(n-1)
 }
 
 // checkEven(600);
@@ -266,17 +266,13 @@ function letterCapitalize(str) {
 // console.log(letterCapitalize('hello world'));
 
 function checkNums(num1,num2) {
-
     if(num2 > num1){
         return true
     }
-
     else if(num2 < num1){
         return false
     }
-
     return -1
-
 }
 
 // console.log(checkNums(46, 44));
@@ -297,3 +293,22 @@ function sortChar(str) {
 }
 
 sortChar('testavd');
+
+// Recursion
+
+function findOdd(arr) {
+    let numbers = [];
+    if(arr.length = 1){
+        return numbers
+    }
+    else if(arr[0]%2===1){
+        numbers.push(arr[0])
+    }
+    else {
+        let x = arr.slice(1);
+        return findOdd(x);
+    }
+    return numbers;
+}
+
+console.log(findOdd([2,2,4,5,7,66]));
