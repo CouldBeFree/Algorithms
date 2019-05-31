@@ -311,4 +311,102 @@ function findOdd(arr) {
     return numbers;
 }
 
-console.log(findOdd([2,2,4,5,7,66]));
+
+/* 100 Algorithms */
+
+// 7.2
+
+function add() {
+    let array = [...arguments];
+    let total = 0;
+    array.forEach(function (el) {
+        total += el
+    });
+
+    return total;
+}
+
+// 8
+
+let picture = ['abc', 'ded'];
+
+function addBorder(arr) {
+    const wallLength = arr[0].length + 2;
+    let wall = '';
+
+    for(let i = 0; i < wallLength; i++){
+        wall = wall.concat('*');
+    }
+
+    arr.unshift(wall);
+    arr.push(wall);
+
+    for(let i = 1; i < arr.length -1; i++){
+        arr[i] = '*'.concat(arr[i], '*')
+    }
+
+    return arr;
+}
+
+// 9
+
+function sumDigits(digit) {
+    let string = digit.toString().split('');
+
+    return string.reduce((a, b) => {
+        return parseInt(a) + parseInt(b)
+    })
+}
+
+// 10
+
+function findPair(input) {
+    let largest = input[0] * input[1];
+
+    for(let i = 1; i < input.length - 1; i++) {
+        const product = input[i] * input[i + 1];
+
+        largest = largest < product ? product : largest;
+    }
+
+    return largest;
+}
+
+// 11
+
+function findLongestStrings(strArray) {
+    let largest = 0;
+    let output = [];
+
+    strArray.forEach(item => {
+       largest = largest < item.length ? item.length : largest
+    });
+
+    strArray.forEach(item => {
+       if(item.length === largest){
+           output.push(item)
+       }
+    });
+
+    return output
+}
+
+// 12
+
+function alphabeticShift(inputString) {
+    const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let inputShifted = inputString.split('');
+
+    for(let i = 0; i < inputShifted.length; i++){
+        let index = 0;
+
+        if(inputShifted[i] !== 'z'){
+            index = alphabet.indexOf(inputShifted[i]) + 1;
+            console.log(index);
+        }
+
+        inputShifted[i] = alphabet[index]
+    }
+
+    return inputShifted.join('')
+}
